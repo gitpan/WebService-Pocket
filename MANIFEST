@@ -1,0 +1,12 @@
+CHANGES
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README.md
+README.pod
+dist.ini
+lib/WebService/Pocket.pm
+lib/WebService/Pocket/Item.pm
+lib/WebService/Pocket/Stats.pm
+t/00-compile.t
