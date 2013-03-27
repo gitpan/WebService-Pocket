@@ -2,13 +2,14 @@ use strict;
 use warnings;
 package WebService::Pocket;
 {
-  $WebService::Pocket::VERSION = '0.001';
+  $WebService::Pocket::VERSION = '0.002';
 }
 use Data::Dumper;
 use Moose;
 use HTTP::Tiny;
 use JSON;
 use Try::Tiny;
+use WebService::Pocket::Item;
 
 # ABSTRACT: Client for the Pocket api (http://getpocket.com/api/)
 
@@ -116,7 +117,7 @@ WebService::Pocket - Client for the Pocket api (http://getpocket.com/api/)
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -128,7 +129,7 @@ version 0.001
     );
 
     # Get list of read items as Array of WebService::Pocket::Item objects
-    my $items = $p->list( state => 1 )
+    my $items = $p->list( state => 1 );
 
     # Add an item
     $p->add({ url => 'http://www.article.com', title => 'My Title' });
@@ -240,6 +241,20 @@ law.
 
 Works under CC0 do not require attribution. When citing the work, you should
 not imply endorsement by the author.
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Andreas Marienborg <andreas.marienborg@gmail.com>
+
+=item *
+
+ben hengst <notbenh@cpan.org>
+
+=back
 
 =cut
 
