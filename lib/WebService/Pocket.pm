@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package WebService::Pocket;
 {
-  $WebService::Pocket::VERSION = '0.002';
+  $WebService::Pocket::VERSION = '0.003';
 }
 use Data::Dumper;
 use Moose;
@@ -107,9 +107,11 @@ sub _make_request {
 
 1;
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -117,7 +119,7 @@ WebService::Pocket - Client for the Pocket api (http://getpocket.com/api/)
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -129,7 +131,7 @@ version 0.002
     );
 
     # Get list of read items as Array of WebService::Pocket::Item objects
-    my $items = $p->list( state => 1 );
+    my $items = $p->list( state => 'read' );
 
     # Add an item
     $p->add({ url => 'http://www.article.com', title => 'My Title' });
@@ -252,9 +254,12 @@ Andreas Marienborg <andreas.marienborg@gmail.com>
 
 =item *
 
+Paul Fenwick <pjf@perltraining.com.au>
+
+=item *
+
 ben hengst <notbenh@cpan.org>
 
 =back
 
 =cut
-

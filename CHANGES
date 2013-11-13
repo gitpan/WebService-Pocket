@@ -1,9 +1,60 @@
 ==================================================
-Changes from 2012-03-27 00:00:00 +0000 to present.
+Changes from 2012-11-13 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.002 at 2013-03-27 20:56:46 +0000
+version 0.003 at 2013-11-13 19:32:04 +0000
+------------------------------------------
+
+  Change: ae913f82c38a4d353fe0f1c857e1be87a2ef530c
+  Author: William Wolf <throughnothing@gmail.com>
+  Date : 2013-11-13 11:31:42 +0000
+
+    Update README + Makefile 
+
+  Change: 76d4e90d923af996c0db1f0e1b6091ff53eda734
+  Author: William Wolf <throughnothing@gmail.com>
+  Date : 2013-11-13 10:53:32 +0000
+
+    Merge pull request #4 from pjf/master
+
+    Lots of minor bugfixes and improvements 
+
+  Change: bde3a7edd688518e488fea4af821f0ff92db242b
+  Author: Paul Fenwick <pjf@perltraining.com.au>
+  Date : 2013-11-13 20:50:49 +0000
+
+    README.md clean-up. Updated Makefile.PL for non-dzil users. 
+
+  Change: ff5132ee6b7588bd8851a30243b7ad3c27910b6c
+  Author: Paul Fenwick <pjf@perltraining.com.au>
+  Date : 2013-10-22 16:43:45 +0000
+
+    Extend the `pocket` script to list pocket items.
+
+    It's super-simple functionality, but it works. :) 
+
+  Change: 1ef23ff3b18d4adc402aaa5b809efe2500e03c02
+  Author: Paul Fenwick <pjf@perltraining.com.au>
+  Date : 2013-10-22 16:41:39 +0000
+
+    Documentation fix: list's state option takes a string
+
+    The v2 API docs suggests using the strings 'read' and 'unread' as
+    options to the 'state' parameter. So we'll adjust the synopsis to
+    show this. 
+
+  Change: 54ffb9e9c786a3dcc1ff3a7921abd3115ac9b9af
+  Author: Paul Fenwick <pjf@perltraining.com.au>
+  Date : 2013-10-22 16:22:00 +0000
+
+    Add explicit pre-req vesions of HTTP::Tiny and Net::SSLeay
+
+    We need SSLeay >= 1.49 for https support We need a recent HTTP::Tiny
+    >= 0.014 for www_form_urlencode() 
+
+------------------------------------------
+version 0.002 at 2013-03-27 20:56:42 +0000
 ------------------------------------------
 
   Change: f1bdd144a060ada8735a612e6d173a92a1a43f7e
@@ -135,28 +186,6 @@ version 0.002 at 2013-03-27 20:56:46 +0000
 
     syntax error in example code due to missing semicolon 
 
-------------------------------------------
-version 0.001 at 2012-06-12 15:59:33 +0000
-------------------------------------------
-
-  Change: 9bbf86e569e6eae43c81e91ebe56bc96cde5184e
-  Author: William Wolf <throughnothing@gmail.com>
-  Date : 2012-06-12 11:59:33 +0000
-
-    v0.001 
-
-  Change: a4acee305ede4bcea457653ef075b4687e1139bb
-  Author: William Wolf <throughnothing@gmail.com>
-  Date : 2012-06-12 11:58:10 +0000
-
-    Initial Pocket API 
-
-  Change: d484b5f63e5460f79fc6c025978ccb9e1f1b511f
-  Author: William Wolf <throughnothing@gmail.com>
-  Date : 2012-06-11 23:00:39 +0000
-
-    initial commit 
-
-================
-End of releases.
-================
+===============================================
+Plus 1 release after 2012-11-13 00:00:00 +0000.
+===============================================

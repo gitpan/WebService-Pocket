@@ -1,6 +1,6 @@
 package WebService::Pocket::Script;
 {
-  $WebService::Pocket::Script::VERSION = '0.002';
+  $WebService::Pocket::Script::VERSION = '0.003';
 }
 #ABSTRACT: Wrap up WebService::Pocket into a runable script with a config file
 use Moose;
@@ -34,6 +34,7 @@ password=s3cr3t
 Commands:
 
   add <url> [<url>]: Add url(s) to your pocket list
+  list             : List unread items in pocket
 
 END
 };
@@ -70,12 +71,26 @@ sub cmd_add {
     print join("\n*", map { $_->url } @$res);
 }
 
+sub cmd_list {
+    my ($self, @args) = @_;
+
+    my $list = $self->list(state => 'unread');
+
+    foreach my $item (@$list) {
+        # Not everything has a title. In those cases, show the url.
+        my $title = $item->{title} || $item->{url};
+        print "* $title\n";
+    }
+}
 
 
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -83,7 +98,7 @@ WebService::Pocket::Script - Wrap up WebService::Pocket into a runable script wi
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 AUTHOR
 
@@ -100,19 +115,4 @@ law.
 Works under CC0 do not require attribution. When citing the work, you should
 not imply endorsement by the author.
 
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item *
-
-Andreas Marienborg <andreas.marienborg@gmail.com>
-
-=item *
-
-ben hengst <notbenh@cpan.org>
-
-=back
-
 =cut
-

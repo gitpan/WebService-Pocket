@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package WebService::Pocket::Stats;
 {
-  $WebService::Pocket::Stats::VERSION = '0.002';
+  $WebService::Pocket::Stats::VERSION = '0.003';
 }
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -21,9 +21,11 @@ has user_since   => ( is => 'ro',
 
 1;
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -31,7 +33,7 @@ WebService::Pocket::Stats
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -72,19 +74,4 @@ law.
 Works under CC0 do not require attribution. When citing the work, you should
 not imply endorsement by the author.
 
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item *
-
-Andreas Marienborg <andreas.marienborg@gmail.com>
-
-=item *
-
-ben hengst <notbenh@cpan.org>
-
-=back
-
 =cut
-
